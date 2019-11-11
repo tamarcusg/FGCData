@@ -1,5 +1,7 @@
 package com.fgc.data.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +24,15 @@ public class RegistrationService {
 		user.setEmail(register.getEmail());
 		user.setAccess("USER");
 		user.setTotalPlusMinus(0.0);
+		
+		List<User> users = userRepository.findAll();
+		
+		for (User dbu : users) {
+			if (dbu.getEmail().equals(user.getEmail())) {
+				return false;
+			}
+		}
+		
 		User result = userRepository.saveAndFlush(user);
 		if (result == null) {
 			return false;

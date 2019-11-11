@@ -9,32 +9,33 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "user_details")
+@Table(name="user_details")
 public class User {
 
 	@Id
-	String userId;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long userId;
 	
 	@Column(nullable = false)
-	String username;
+	private String username;
 	
 	@Column(nullable = false)
-	String password;
+	private String password;
 	
 	@Column(nullable = false)
-	String email;
+	private String email;
 	
 	@Column(nullable = false)
-	String access;
+	private String access;
 	
 	@Column(nullable = false)
-	Double totalPlusMinus;
+	private Double totalPlusMinus;
 
-	public String getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(String userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 

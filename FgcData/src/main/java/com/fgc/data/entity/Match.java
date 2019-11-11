@@ -6,26 +6,26 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "match_details")
+@Table(name="match_details")
 public class Match {
 	
 	@Id
-	String matchId;
+	private String matchId;
 	
 	@Column(nullable = false)
-	String winnerId;
+	private String winnerId;
 	
 	@Column(nullable = false)
-	String loserId;
+	private String loserId;
 	
 	@Column(nullable = false)
-	String finalScore;
+	private String finalScore;
 	
 	@Column(nullable = false)
-	String game;
+	private String game;
 	
 	@Column(nullable = false)
-	String timestamp;
+	private String timestamp;
 
 	public String getMatchId() {
 		return matchId;

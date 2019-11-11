@@ -8,6 +8,7 @@
 		<version>2.1.9.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	
 	<groupId>com.fgc.data</groupId>
 	<artifactId>FgcData</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -33,7 +34,6 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 
 		<dependency>
